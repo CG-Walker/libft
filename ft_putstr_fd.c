@@ -6,7 +6,7 @@
 /*   By: cgoncalv <cgoncalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 17:13:07 by cgoncalv          #+#    #+#             */
-/*   Updated: 2019/10/22 13:54:38 by cgoncalv         ###   ########.fr       */
+/*   Updated: 2019/11/06 16:13:26 by cgoncalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,5 @@ void	ft_putstr_fd(char *s, int fd)
 
 	if (s == NULL)
 		return ;
-	i = -1;
-	while (s[++i])
-		write(fd, &s[i], 1);
+	write(fd, &s, ft_strlen(s));
 }
