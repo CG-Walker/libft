@@ -6,7 +6,7 @@
 /*   By: cgoncalv <cgoncalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:28:30 by cgoncalv          #+#    #+#             */
-/*   Updated: 2019/10/22 14:28:57 by cgoncalv         ###   ########.fr       */
+/*   Updated: 2019/11/08 14:42:31 by cgoncalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include "limits.h"
 # define BOOL int
 # define TRUE 1
 # define FALSE 0
@@ -52,6 +53,7 @@ char			*ft_strstr(const char *haystack, const char *needle);
 char			*ft_strnstr(const char *haystack,
 										const char *needle, size_t len);
 char			*ft_strdup(const char *s1);
+char			*ft_strndup(const char *s1, size_t n);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s, char const *set);

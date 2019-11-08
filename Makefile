@@ -6,7 +6,7 @@
 #    By: cgoncalv <cgoncalv@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/18 15:14:55 by cgoncalv          #+#    #+#              #
-#    Updated: 2019/10/22 14:34:16 by cgoncalv         ###   ########.fr        #
+#    Updated: 2019/11/08 14:42:43 by cgoncalv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ SRC			=	ft_atoi.c \
 				ft_strchr.c \
 				ft_strcmp.c \
 				ft_strdup.c \
+				ft_strndup.c \
 				ft_strjoin.c \
 				ft_strlcat.c \
 				ft_strlcpy.c \
