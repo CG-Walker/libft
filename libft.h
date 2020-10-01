@@ -15,7 +15,11 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
 # include "limits.h"
+
 # define BOOL int
 # define TRUE 1
 # define FALSE 0
@@ -59,6 +63,7 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s, char const *set);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			**ft_split(char const *s, char c);
+char			**getlines(char *file);
 
 /*
 **	VOID

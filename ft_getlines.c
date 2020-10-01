@@ -1,11 +1,14 @@
-# include "libft.h"
+#include "libft.h"
 
 size_t nline(char *file)
 {
 	size_t i;
+	char *line;
+	int ret;
+	int fd;
 
 	i = 0;
-	fd = open(file, O_RONLY);
+	fd = open(file, O_RDONLY);
 	while (ret = get_next_line(fd, &line) == 1)
 	{
 		i++;
@@ -26,10 +29,10 @@ char **getlines(char *file)
 	i = 0;
 	if (!(lines = malloc(sizeof(char*) * nline(file) + 1)))
 		return (NULL);
-	fd = open(file, O_RONLY);
+	fd = open(file, O_RDONLY);
 	while (ret = get_next_line(fd, &line) == 1)
 	{
-		lines[i++] = line;
+		lines[i++] = ft_strndup(line, ft_strlen(line));
 		free(line);
 	}
 	lines[i] = NULL;

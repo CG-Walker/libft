@@ -17,6 +17,7 @@ CFLAGS		=	-W -Wall -Werror -Wextra -c
 SRC			=	ft_atoi.c \
 				ft_bzero.c \
 				ft_calloc.c \
+				ft_getlines.c \
 				ft_isalnum.c \
 				ft_isalpha.c \
 				ft_isascii.c \
