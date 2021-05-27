@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgoncalv <cgoncalv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:28:30 by cgoncalv          #+#    #+#             */
-/*   Updated: 2019/11/08 14:42:31 by cgoncalv         ###   ########.fr       */
+/*   Updated: 2021/05/27 18:41:18 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@
 # include <fcntl.h>
 # include "limits.h"
 
-# define BOOL int
-# define TRUE 1
-# define FALSE 0
+typedef enum    e_bool
+{
+    False,
+    True
+}   t_bool;
 
 typedef struct	s_list
 {
@@ -96,7 +98,7 @@ size_t			ft_strlcat(char *dst, const char *src, size_t size);
 t_list			*ft_lstnew(void *content);
 t_list			*ft_lstlast(t_list *lst);
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *));
-int				ft_lstsize(t_list *lst);
+size_t			ft_lstsize(t_list *lst);
 void			ft_lstadd_back(t_list **alst, t_list *new);
 void			ft_lstadd_front(t_list **alst, t_list *new);
 void			ft_lstdelone(t_list *lst, void (*del)(void*));

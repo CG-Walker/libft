@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgoncalv <cgoncalv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 16:20:29 by cgoncalv          #+#    #+#             */
-/*   Updated: 2019/10/22 13:47:05 by cgoncalv         ###   ########.fr       */
+/*   Updated: 2021/05/26 16:55:20 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static BOOL	is_set(char const c, char const *set)
+static t_bool	is_set(char const c, char const *set)
 {
 	size_t i;
 
@@ -20,9 +20,9 @@ static BOOL	is_set(char const c, char const *set)
 	while (c != set[i] && set[i])
 		i++;
 	if (c == set[i])
-		return (TRUE);
+		return (True);
 	else
-		return (FALSE);
+		return (False);
 }
 
 char		*ft_strtrim(char const *s, char const *set)
@@ -35,9 +35,9 @@ char		*ft_strtrim(char const *s, char const *set)
 		return (0);
 	start = 0;
 	end = ft_strlen(s);
-	while (is_set(s[start], set) == TRUE && s[start])
+	while (is_set(s[start], set) == True && s[start])
 		start++;
-	while (is_set(s[end], set) == TRUE && end > start)
+	while (is_set(s[end], set) == True && end > start)
 		end--;
 	if (!(copy = malloc(sizeof(char) * ((end - start) + 2))))
 		return (NULL);

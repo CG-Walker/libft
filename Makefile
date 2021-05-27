@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cgoncalv <cgoncalv@student.42.fr>          +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/18 15:14:55 by cgoncalv          #+#    #+#              #
-#    Updated: 2019/11/08 14:42:43 by cgoncalv         ###   ########.fr        #
+#    Updated: 2021/05/26 16:58:47 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,14 +17,12 @@ CFLAGS		=	-W -Wall -Werror -Wextra -c
 SRC			=	ft_atoi.c \
 				ft_bzero.c \
 				ft_calloc.c \
-				ft_getlines.c \
 				ft_isalnum.c \
 				ft_isalpha.c \
 				ft_isascii.c \
 				ft_isdigit.c \
 				ft_isprint.c \
 				ft_itoa.c \
-				ft_memccpy.c \
 				ft_memchr.c \
 				ft_memcmp.c \
 				ft_memcpy.c \
@@ -51,7 +49,8 @@ SRC			=	ft_atoi.c \
 				ft_strtrim.c \
 				ft_substr.c \
 				ft_tolower.c \
-				ft_toupper.c
+				ft_toupper.c \
+				#ft_memccpy.c
 
 SRCBONUS	=	ft_lstadd_back_bonus.c \
 				ft_lstadd_front_bonus.c \
