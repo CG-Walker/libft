@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/18 15:14:55 by cgoncalv          #+#    #+#              #
-#    Updated: 2021/05/26 16:58:47 by marvin           ###   ########.fr        #
+#    Updated: 2021/05/27 19:23:32 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,21 +50,18 @@ SRC			=	ft_atoi.c \
 				ft_substr.c \
 				ft_tolower.c \
 				ft_toupper.c \
+				ft_lstadd_back.c \
+				ft_lstadd_front.c \
+				ft_lstclear.c \
+				ft_lstdelone.c \
+				ft_lstiter.c \
+				ft_lstlast.c \
+				ft_lstmap.c \
+				ft_lstnew.c \
+				ft_lstsize.c \
 				#ft_memccpy.c
 
-SRCBONUS	=	ft_lstadd_back_bonus.c \
-				ft_lstadd_front_bonus.c \
-				ft_lstclear_bonus.c \
-				ft_lstdelone_bonus.c \
-				ft_lstiter_bonus.c \
-				ft_lstlast_bonus.c \
-				ft_lstmap_bonus.c \
-				ft_lstnew_bonus.c \
-				ft_lstsize_bonus.c
-
 OBJ 		=	$(SRC:.c=.o)
-
-OBJBONUS	=	$(SRCBONUS:.c=.o)
 
 LIB 		=	ar rc
 
@@ -86,6 +83,3 @@ fclean:		clean
 			@echo "\033[32m[✓]\033[0m		[libft.a deleted]"
 
 re:			fclean all
-
-bonus:		$(OBJBONUS)
-			$(LIB) $(NAME) $(OBJBONUS)
