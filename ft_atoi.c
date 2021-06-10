@@ -3,39 +3,54 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgoncalv <cgoncalv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:14:10 by cgoncalv          #+#    #+#             */
-/*   Updated: 2019/10/17 15:52:56 by cgoncalv         ###   ########.fr       */
+/*   Updated: 2021/06/11 00:48:05 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#define SPACES " \t\v\f\r\n"
 
-int		ft_atoi(const char *str)
+static size_t	check_spaces(const char *str)
 {
-	unsigned long long	value;
-	unsigned long long	max_value;
-	int					sign_val;
-	size_t				i;
+	size_t	i;
+	size_t	j;
 
-	value = 0;
-	max_value = 9223372036854775807;
 	i = 0;
-	sign_val = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\v'
-	|| str[i] == '\f' || str[i] == '\r' || str[i] == '\n')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-		sign_val = (str[i++] == '-') ? -1 : 1;
-	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
+	j = 0;
+	printf("str[i] = '%c'\n", str[i]);
+	while (str[i] && SPACES[j])
 	{
-		value *= 10;
-		value += (str[i++] - '0');
-		if (value > max_value && sign_val == 1)
-			return (-1);
-		else if (value > max_value + 1 && sign_val == -1)
-			return (0);
+		if (str[i] == SPACES[j])
+		{
+			i++;
+			j = -1;
+		}
+		j++;
 	}
-	return ((int)(sign_val * value));
+	return (i);
+}
+
+int	ft_atoi(const char *str)
+{
+	int		ret;
+	int		sign;
+	size_t	i;
+
+	ret = 0;
+	sign = 1;
+	i = check_spaces(str);
+	if (str[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	while (str[i] && ft_isdigit(str[i]) == True)
+	{
+		ret = ret * 10 + str[i] - '0';
+		i++;
+	}
+	return (sign * ret);
 }

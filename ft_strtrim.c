@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 16:20:29 by cgoncalv          #+#    #+#             */
-/*   Updated: 2021/05/26 16:55:20 by marvin           ###   ########.fr       */
+/*   Updated: 2021/06/11 00:58:30 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static t_bool	is_set(char const c, char const *set)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (c != set[i] && set[i])
@@ -25,7 +25,7 @@ static t_bool	is_set(char const c, char const *set)
 		return (False);
 }
 
-char		*ft_strtrim(char const *s, char const *set)
+char	*ft_strtrim(char const *s, char const *set)
 {
 	size_t	end;
 	size_t	start;
@@ -39,7 +39,8 @@ char		*ft_strtrim(char const *s, char const *set)
 		start++;
 	while (is_set(s[end], set) == True && end > start)
 		end--;
-	if (!(copy = malloc(sizeof(char) * ((end - start) + 2))))
+	copy = malloc(sizeof(char) * ((end - start) + 2));
+	if (!(copy))
 		return (NULL);
 	ft_memcpy(copy, &s[start], ((end - start) + 1));
 	copy[((end - start) + 1)] = '\0';

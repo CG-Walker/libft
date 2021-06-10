@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgoncalv <cgoncalv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 14:38:23 by cgoncalv          #+#    #+#             */
-/*   Updated: 2019/11/08 14:40:10 by cgoncalv         ###   ########.fr       */
+/*   Updated: 2021/06/11 01:00:45 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_strndup(const char *s1, size_t n)
 	size_t	i;
 
 	i = -1;
-	if (!(copy = malloc((sizeof(char) * (n + 1)))))
+	copy = malloc(sizeof(char) * (n + 1));
+	if (!(copy))
 		return (NULL);
 	while (++i < n)
 		copy[i] = s1[i];
