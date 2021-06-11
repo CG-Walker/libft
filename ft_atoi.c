@@ -20,7 +20,6 @@ static size_t	check_spaces(const char *str)
 
 	i = 0;
 	j = 0;
-	printf("str[i] = '%c'\n", str[i]);
 	while (str[i] && SPACES[j])
 	{
 		if (str[i] == SPACES[j])

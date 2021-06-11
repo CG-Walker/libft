@@ -40,9 +40,9 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		is_negative = True;
 	if (n > 0)
-		copy_n = n;
+		cpy_n = n;
 	else
-		copy_n = -n;
+		cpy_n = -n;
 	n = cpy_n;
 	while (cpy_n > 9)
 	{
