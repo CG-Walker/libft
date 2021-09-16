@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: cgoncalv <cgoncalv@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/18 15:14:55 by cgoncalv          #+#    #+#              #
-#    Updated: 2021/05/27 19:23:32 by marvin           ###   ########.fr        #
+#    Updated: 2021/09/16 17:42:31 by cgoncalv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRC			=	ft_atoi.c \
 				ft_putnbr_fd.c \
 				ft_putstr_fd.c \
 				ft_split.c \
+				ft_stradd.c \
 				ft_strchr.c \
 				ft_strcmp.c \
 				ft_strdup.c \
