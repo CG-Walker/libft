@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cgoncalv <cgoncalv@student.42.fr>          +#+  +:+       +#+         #
+#    By: walker <walker@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/18 15:14:55 by cgoncalv          #+#    #+#              #
-#    Updated: 2021/09/16 17:42:31 by cgoncalv         ###   ########.fr        #
+#    Updated: 2021/09/17 13:08:41 by walker           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ SRC			=	ft_atoi.c \
 				ft_lstadd_front.c \
 				ft_lstclear.c \
 				ft_lstdelone.c \
+				ft_lstfirst.c \
 				ft_lstiter.c \
 				ft_lstlast.c \
 				ft_lstmap.c \

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: walker <walker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:14:10 by cgoncalv          #+#    #+#             */
-/*   Updated: 2021/06/11 00:48:05 by marvin           ###   ########.fr       */
+/*   Updated: 2021/09/18 16:49:53 by walker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ static size_t	check_spaces(const char *str)
 	return (i);
 }
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
-	int		ret;
+	long	ret;
 	int		sign;
 	size_t	i;
 

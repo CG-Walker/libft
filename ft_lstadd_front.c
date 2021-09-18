@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgoncalv <cgoncalv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: walker <walker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 16:05:28 by cgoncalv          #+#    #+#             */
-/*   Updated: 2019/10/21 14:07:18 by cgoncalv         ###   ########.fr       */
+/*   Updated: 2021/09/18 16:33:10 by walker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,15 @@ void	ft_lstadd_front(t_list **alst, t_list *new)
 {
 	if (alst == NULL || new == NULL)
 		return ;
-	new->next = *alst;
-	*alst = new;
+	if (*alst == NULL)
+	{
+		(*alst) = new;
+		(*alst)->previous = NULL;
+	}
+	else
+	{
+		ft_lstfirst(*alst)->previous = new;
+		new->next = *alst;
+		*alst = new;
+	}
 }

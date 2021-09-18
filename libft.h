@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgoncalv <cgoncalv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: walker <walker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:28:30 by cgoncalv          #+#    #+#             */
-/*   Updated: 2021/09/16 17:43:23 by cgoncalv         ###   ########.fr       */
+/*   Updated: 2021/09/18 16:52:09 by walker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,14 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
+	struct s_list	*previous;
 }	t_list;
 
 /*
 **	INT
 */
 
-int				ft_atoi(const char *str);
+long			ft_atoi(const char *str);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
 int				ft_isascii(int c);
@@ -98,6 +99,7 @@ size_t			ft_strlcat(char *dst, const char *src, size_t size);
 
 t_list			*ft_lstnew(void *content);
 t_list			*ft_lstlast(t_list *lst);
+t_list			*ft_lstfirst(t_list *lst);
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *));
 size_t			ft_lstsize(t_list *lst);
 void			ft_lstadd_back(t_list **alst, t_list *new);
