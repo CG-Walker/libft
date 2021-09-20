@@ -6,7 +6,7 @@
 /*   By: walker <walker@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:28:30 by cgoncalv          #+#    #+#             */
-/*   Updated: 2021/09/20 18:18:26 by walker           ###   ########.fr       */
+/*   Updated: 2021/09/20 18:20:18 by walker           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,8 +104,8 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *));
 size_t			ft_lstsize(t_list *lst);
 void			ft_lstadd_back(t_list **alst, t_list *new);
 void			ft_lstadd_front(t_list **alst, t_list *new);
-void			ft_lstdelone(void *content, t_list **chunk);
-void			ft_lstclear(t_list **lst, void (*del)(void*));
+void			ft_lstdelone(void *content, t_list **chunk); /*
+void			ft_lstclear(t_list **lst, void (*del)(void*)); */
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 
 #endif
